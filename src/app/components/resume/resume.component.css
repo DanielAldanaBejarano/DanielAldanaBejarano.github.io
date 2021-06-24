@@ -1,0 +1,36 @@
+#resumeCard {    
+    height: 100vh;
+    width: 100%;
+    margin: 0;        
+    color: #271b47;  
+    border-color: #271b47;
+    align-items: center;   
+    justify-content: space-evenly;
+}
+
+#resumeCard:hover{
+    transform: scale(1.02);
+    box-shadow: 0 20px 20px rgb(7, 7, 7), 0 8px 8px rgba(0, 0, 0, 0.06);
+    background-size: cover;
+    background-color: whitesmoke;
+}
+
+#resumeCard:hover .iconify{
+    color: rgb(202, 44, 92);
+}
+
+#resumeParagraph {
+    margin: 5%;   
+    padding-top: 10%;
+    border-top-style: double;
+    border-top-color: rgb(202, 44, 92);   
+}
+
+#resumeBtn {
+    background-color: rgb(202, 44, 92);
+}
+
+.iconify {
+    position: absolute;
+    top: 5%;    
+}

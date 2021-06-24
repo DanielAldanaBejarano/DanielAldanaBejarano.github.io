@@ -1,0 +1,12 @@
+/* You can add global styles to this file, and also import other style files */
+.iconify {    
+    width: 8vw;    
+    height: 8vh;
+}
+
+body {
+    width: 100%;
+    background-image: url();
+    background-size: 100px;
+    background-repeat: space;
+}
