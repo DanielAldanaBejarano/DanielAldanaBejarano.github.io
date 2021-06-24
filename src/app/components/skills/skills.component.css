@@ -1,6 +1,7 @@
 #skillsCard {    
     height: 100vh;
-    width: 100%;       
+    width: 70vw;    
+    margin: 0;
     color: #271b47;  
     border-color: #271b47;
     align-items: center;
@@ -15,18 +16,18 @@
 }
 
 #skillsCard:hover .iconify{
-    color: orange;
+    color: rgb(123, 89, 187);
 }
 
 .txt {
     margin: .1%;
     margin-inline: 5%;
-    border: orange;
+    border: rgb(123, 89, 187);
     border-top-style: double;
 }
 
 #skillsBtn {
-    background-color: orange;
+    background-color: rgb(123, 89, 187);
 }
 
 .iconify {

@@ -13,50 +13,82 @@ export class MenuButtonsComponent implements OnInit {
   ngOnInit(): void {
     $(document).ready(function(){
       
-      $(".card").toggle(); 
-      $(".skill").hide();  
+      /* Hide cards*/
+      $(".card").hide();  
 
       $("#resumeBtn").click(function(){ 
-        /* Hide Cards */
-        $("#eduCard").hide();  
-        $("#experienceCard").hide();  
-        $("#achievmentsCard").hide();  
-        $("#skillsCard").hide(); 
+        $("#profileContainer").addClass("profileOpen")
+        /* Hide open cards */
+        $("#eduCard").hide(1000);  
+        $("#experienceCard").hide(1000);  
+        $("#achievmentsCard").hide(1000);  
+        $("#skillsCard").hide(1000); 
+        /* Change buttons colors */
+        $("#eduBtn").removeClass("eduBtnOn")
+        $("#experienceBtn").removeClass("expBtnOn")
+        $("#achievmentsBtn").removeClass("achBtnOn")
+        $("#skillsBtn").removeClass("sklBtnOn")
+        /* Toggle card */
+        $("#resumeCard").toggle(500);
         /* Change Btn Color */
-        $(".btnMenu").css({"background-color": "#353d61"})         
-        $("#resumeCard").toggle(1000);
-        $("#resumeBtn").toggleClass("resBtnOn btnMenu")        
+        $("#resumeBtn").toggleClass("resBtnOn")
       });
       $("#eduBtn").click(function(){    
-        $("#resumeCard").hide();  
-        $("#experienceCard").hide();  
-        $("#achievmentsCard").hide();  
-        $("#skillsCard").hide();     
-        $("#eduCard").toggle();     
+        $("#profileContainer").addClass("profileOpen")
+        $("#resumeCard").hide(1000);  
+        $("#experienceCard").hide(1000);  
+        $("#achievmentsCard").hide(1000);  
+        $("#skillsCard").hide(1000);   
+        /* Change buttons colors */
+        $("#resumeBtn").removeClass("resBtnOn")
+        $("#experienceBtn").removeClass("expBtnOn")
+        $("#achievmentsBtn").removeClass("achBtnOn")
+        $("#skillsBtn").removeClass("sklBtnOn")
+
+        $("#eduCard").toggle(1000);     
         $("#eduBtn").toggleClass("eduBtnOn")            
       });
+
       $("#experienceBtn").click(function(){
-        $("#eduCard").hide();  
-        $("#resumeCard").hide();  
-        $("#achievmentsCard").hide();  
-        $("#skillsCard").hide(); 
-        $("#experienceCard").toggle();
+        $("#profileContainer").addClass("profileOpen")
+        $("#eduCard").hide(1000);  
+        $("#resumeCard").hide(1000);  
+        $("#achievmentsCard").hide(1000);  
+        $("#skillsCard").hide(1000); 
+
+        $("#resumeBtn").removeClass("resBtnOn")
+        $("#eduBtn").removeClass("eduBtnOn")
+        $("#achievmentsBtn").removeClass("achBtnOn")
+        $("#skillsBtn").removeClass("sklBtnOn")
+        $("#experienceCard").toggle(1000);
         $("#experienceBtn").toggleClass("expBtnOn") 
       });          
       $("#achievmentsBtn").click(function(){
-        $("#eduCard").hide();  
-        $("#resumeCard").hide();  
-        $("#experienceCard").hide();  
-        $("#skillsCard").hide(); 
-        $("#achievmentsCard").toggle();
+        $("#profileContainer").addClass("profileOpen")
+        $("#eduCard").hide(1000);  
+        $("#resumeCard").hide(1000);  
+        $("#experienceCard").hide(1000);  
+        $("#skillsCard").hide(1000); 
+        $("#resumeBtn").removeClass("resBtnOn")
+        $("#eduBtn").removeClass("eduBtnOn")
+        $("#experienceBtn").removeClass("expBtnOn")
+        $("#skillsBtn").removeClass("sklBtnOn")
+        $("#achievmentsCard").toggle(1000);
         $("#achievmentsBtn").toggleClass("achBtnOn") 
       });          
       $("#skillsBtn").click(function(){      
-        $("#eduCard").hide();  
-        $("#experienceCard").hide();  
-        $("#achievmentsCard").hide();  
-        $("#resumeCard").hide();   
-        $("#skillsCard").toggle();         
+        $("#profileContainer").addClass("profileOpen")
+        $("#eduCard").hide(1000);  
+        $("#experienceCard").hide(1000);  
+        $("#achievmentsCard").hide(1000);  
+        $("#resumeCard").hide(1000);   
+        
+        $("#resumeBtn").removeClass("resBtnOn")
+        $("#eduBtn").removeClass("eduBtnOn")
+        $("#experienceBtn").removeClass("expBtnOn")
+        $("#achievmentsBtn").removeClass("achBtnOn")
+
+        $("#skillsCard").toggle(1000);         
         $("#skillsBtn").toggleClass("sklBtnOn")        
       });
     })        

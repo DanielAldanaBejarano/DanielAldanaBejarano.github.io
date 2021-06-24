@@ -1,6 +1,7 @@
 * {
     color: rgb(31, 38, 65);
     text-decoration: none;
+    position: sticky;
 }
 
 .footer {    
